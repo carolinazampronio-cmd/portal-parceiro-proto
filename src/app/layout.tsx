@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import "@ifood/ifdl-fonts";
-import "@ifood/ifdl-css-themes";
 import "./globals.css";
 
 export const metadata: Metadata = {
