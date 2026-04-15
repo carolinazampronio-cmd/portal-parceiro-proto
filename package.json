@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ifood/ifdl-css-themes": "^1.2.13",
+    "@ifood/ifdl-fonts": "^0.8.13",
+    "@ifood/ifdl-icons": "^0.4.10",
+    "@ifood/ifds-web": "^1.13.0",
     "next": "16.2.3",
     "react": "19.2.4",
     "react-dom": "19.2.4"
