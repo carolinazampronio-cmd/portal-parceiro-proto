@@ -509,7 +509,7 @@ export function HomePage({
       <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
         <button
           data-tour-step="cta-start"
-          onClick={() => onNavigateToStep?.("Area de entrega")}
+          onClick={() => onNavigateToStep?.("Formas de pagamento")}
           className="bg-[#141414] text-white w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-[12px] cursor-pointer hover:bg-[#333] transition-colors"
         >
           <span className={`${font.medium} text-[16px] leading-[24px]`}>

@@ -750,8 +750,8 @@ function TopHeader({ onMenuToggle }: { onMenuToggle: () => void }) {
                 <path d="M20 0H0V20H20V0Z" fill="white" />
               </mask>
               <g mask="url(#mask_wink)">
-                <path d={svgPaths.p392e2e00} fill="#EB0033" />
-                <path d={svgPaths.p10bfbe00} fill="#EB0033" />
+                <path d={svgPaths.p392e2e00} stroke="#EB0033" strokeWidth="2" strokeLinecap="round" fill="none" />
+                <path d={svgPaths.p10bfbe00} stroke="#EB0033" strokeWidth="2" strokeLinecap="round" fill="none" />
                 <path d={svgPaths.p37304400} fill="#EB0033" />
               </g>
             </g>
@@ -816,29 +816,19 @@ function MainContent({ onChecklistChange }: { onChecklistChange?: (allChecked: b
         <h1 className={`${font.medium} text-[20px] text-black leading-[24px]`}>
           Parabens! Voce passou por todas as etapas.
         </h1>
-        <div className="flex flex-wrap items-center gap-1">
-          <div className="h-5 overflow-hidden w-[189px] shrink-0">
-            <div
-              className="h-[30px] w-[253px] -mt-[5px]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(194.955deg, rgb(255, 12, 193) 17.935%, rgb(246, 6, 127) 50.47%, rgb(235, 0, 51) 87.702%)",
-                maskImage: `url('${imgRectangle34626331}')`,
-                WebkitMaskImage: `url('${imgRectangle34626331}')`,
-                maskSize: "184.563px 15.078px",
-                WebkitMaskSize: "184.563px 15.078px",
-                maskPosition: "1.328px 9.281px",
-                WebkitMaskPosition: "1.328px 9.281px",
-                maskRepeat: "no-repeat",
-                WebkitMaskRepeat: "no-repeat",
-              }}
-            />
-          </div>
-          <p className={`${font.regular} text-[16px] text-[#666] leading-[20px]`}>
-            Te mostramos a forca que sua loja tem em relacao a outras lojas da
-            sua regiao na mesma categoria
-          </p>
-        </div>
+        <p className={`${font.regular} text-[16px] text-[#666] leading-[20px]`}>
+          <span
+            className={`${font.medium} bg-clip-text text-[transparent]`}
+            style={{
+              backgroundImage:
+                "linear-gradient(194.955deg, rgb(255, 12, 193) 17.935%, rgb(246, 6, 127) 50.47%, rgb(235, 0, 51) 87.702%)",
+            }}
+          >
+            Pelos dados preenchidos.
+          </span>
+          {" "}Te mostramos a forca que sua loja tem em relacao a outras lojas da
+          sua regiao na mesma categoria
+        </p>
       </div>
 
       <div className="bg-[#f5f5f5] rounded-[20px] p-2 sm:p-3 flex flex-col gap-2">

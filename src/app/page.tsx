@@ -63,14 +63,6 @@ export default function Home() {
           onClose={() => setShowOnboardingDialog(false)}
           onStartTour={() => {
             setShowOnboardingDialog(false);
-            // Trigger portal transition
-            setScreen("portal-skeleton");
-            setTimeout(() => {
-              setScreen("portal");
-              setTimeout(() => {
-                setShowWelcomeDialog(true);
-              }, 800);
-            }, 1500);
           }}
         />
       )}

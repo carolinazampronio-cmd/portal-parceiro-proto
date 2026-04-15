@@ -35,8 +35,8 @@ function Symbol() {
             <path d="M20 0H0V20H20V0Z" fill="white" />
           </mask>
           <g mask="url(#mask_ph)">
-            <path d={svgPaths.p392e2e00} fill="#EB0033" />
-            <path d={svgPaths.p10bfbe00} fill="#EB0033" />
+            <path d={svgPaths.p392e2e00} stroke="#EB0033" strokeWidth="2" strokeLinecap="round" fill="none" />
+            <path d={svgPaths.p10bfbe00} stroke="#EB0033" strokeWidth="2" strokeLinecap="round" fill="none" />
             <path d={svgPaths.p37304400} fill="#EB0033" />
           </g>
         </g>
