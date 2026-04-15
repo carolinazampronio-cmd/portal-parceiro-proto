@@ -1,0 +1,115 @@
+/* iFood Text Fonts */
+@font-face {
+  font-display: swap;
+  font-family: 'iFood_RC_Textos:Regular';
+  font-style: normal;
+  font-weight: 1 999;
+  src:
+    url('/fonts/iFoodRCTextos-Regular.woff2') format('woff2'),
+    url('/fonts/iFoodRCTextos-Regular.woff') format('woff'),
+    url('/fonts/iFoodRCTextos-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'iFood_RC_Textos:Medium';
+  font-style: normal;
+  font-weight: 1 999;
+  src:
+    url('/fonts/iFoodRCTextos-Medium.woff2') format('woff2'),
+    url('/fonts/iFoodRCTextos-Medium.woff') format('woff'),
+    url('/fonts/iFoodRCTextos-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'iFood_RC_Textos:Bold';
+  font-style: normal;
+  font-weight: 1 999;
+  src:
+    url('/fonts/iFoodRCTextos-Bold.woff2') format('woff2'),
+    url('/fonts/iFoodRCTextos-Bold.woff') format('woff'),
+    url('/fonts/iFoodRCTextos-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'iFood_RC_Titulos:Bold';
+  font-style: normal;
+  font-weight: 1 999;
+  src:
+    url('/fonts/iFoodRCTitulos-Bold.woff2') format('woff2'),
+    url('/fonts/iFoodRCTitulos-Bold.woff') format('woff'),
+    url('/fonts/iFoodRCTitulos-Bold.ttf') format('truetype');
+}
+
+/* Icon Fonts */
+@font-face {
+  font-display: block;
+  font-family: 'pomodoro-icon-line';
+  font-style: normal;
+  src:
+    url('/fonts/ifdl-icons-line.woff') format('woff'),
+    url('/fonts/ifdl-icons-line.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'pomodoro-icon-line:Regular';
+  font-style: normal;
+  src:
+    url('/fonts/ifdl-icons-line.woff') format('woff'),
+    url('/fonts/ifdl-icons-line.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'pomodoro-icon-filled';
+  font-style: normal;
+  src:
+    url('/fonts/ifdl-icons-filled.woff') format('woff'),
+    url('/fonts/ifdl-icons-filled.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: block;
+  font-family: 'pomodoro-icon-filled:Regular';
+  font-style: normal;
+  src:
+    url('/fonts/ifdl-icons-filled.woff') format('woff'),
+    url('/fonts/ifdl-icons-filled.ttf') format('truetype');
+}
+
+/* iFood RC Textos unified family */
+@font-face {
+  font-display: swap;
+  font-family: 'iFood RC Textos';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/iFoodRCTextos-Regular.woff2') format('woff2'),
+    url('/fonts/iFoodRCTextos-Regular.woff') format('woff'),
+    url('/fonts/iFoodRCTextos-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'iFood RC Textos';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('/fonts/iFoodRCTextos-Medium.woff2') format('woff2'),
+    url('/fonts/iFoodRCTextos-Medium.woff') format('woff'),
+    url('/fonts/iFoodRCTextos-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'iFood RC Textos';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/fonts/iFoodRCTextos-Bold.woff2') format('woff2'),
+    url('/fonts/iFoodRCTextos-Bold.woff') format('woff'),
+    url('/fonts/iFoodRCTextos-Bold.ttf') format('truetype');
+}
