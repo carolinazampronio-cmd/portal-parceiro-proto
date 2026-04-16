@@ -7,6 +7,7 @@ import svgPathsPerfil from "../imports/svg-8gkwtvt5bm";
 import { imgRectangle34626331 } from "../imports/svg-ewidz";
 import { imgRectangle as imgPerfilMask } from "../imports/svg-579wf";
 import { HorariosContent } from "./horarios-content";
+import { PagamentoContent } from "./pagamento-content";
 
 /* --- Image constants (local assets) --- */
 const imgAvatarImage = "/images/41d4e8aee82aff46fff4cca6964fe1df4c5520aa.png";
@@ -1372,6 +1373,8 @@ export function SetupPage() {
               <PerfilDaLojaContent isCompleted={completedSteps.has("Perfil da loja")} />
             ) : activeTab === "Horários" ? (
               <HorariosContent isCompleted={completedSteps.has("Horários")} />
+            ) : activeTab === "Formas de pagamento" ? (
+              <PagamentoContent isCompleted={completedSteps.has("Formas de pagamento")} />
             ) : (
               <StepContent tabName={activeTab} isCompleted={completedSteps.has(activeTab)} />
             )}
