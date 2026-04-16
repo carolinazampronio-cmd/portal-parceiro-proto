@@ -57,23 +57,23 @@ const steps = [
     icon: ICON.payment,
     iconFilled: false,
     title: "Formas de pagamento",
-    description: "Configure as bandeiras de cartoes e outros metodos de pagamento que sua loja vai aceitar.",
+    description: "Configure as bandeiras de cartões e outros métodos de pagamento que sua loja vai aceitar.",
     status: "pending" as const,
   },
   {
     number: 2,
     icon: ICON.delivery,
     iconFilled: true,
-    title: "Area de entrega",
-    description: "Defina o raio de entrega e as regioes que sua loja vai atender.",
+    title: "Área de entrega",
+    description: "Defina o raio de entrega e as regiões que sua loja vai atender.",
     status: "pending" as const,
   },
   {
     number: 3,
     icon: ICON.clock,
     iconFilled: false,
-    title: "Horarios",
-    description: "Configure os dias e horarios em que sua loja ficara aberta no iFood.",
+    title: "Horários",
+    description: "Configure os dias e horários em que sua loja ficará aberta no iFood.",
     status: "pending" as const,
   },
   {
@@ -81,31 +81,31 @@ const steps = [
     icon: ICON.store,
     iconFilled: false,
     title: "Perfil da loja",
-    description: "Adicione logo, descricao e informacoes que seus clientes verao.",
+    description: "Adicione logo, descrição e informações que seus clientes verão.",
     status: "pending" as const,
   },
   {
     number: 5,
     icon: ICON.bank,
     iconFilled: false,
-    title: "Dados bancarios",
-    description: "Cadastre a conta onde voce recebera seus pagamentos.",
+    title: "Dados bancários",
+    description: "Cadastre a conta onde você receberá seus pagamentos.",
     status: "pending" as const,
   },
   {
     number: 6,
     icon: ICON.menu,
     iconFilled: false,
-    title: "Cardapio",
-    description: "Monte seu cardapio com itens, precos, fotos e descricoes.",
+    title: "Cardápio",
+    description: "Monte seu cardápio com itens, preços, fotos e descrições.",
     status: "pending" as const,
   },
   {
     number: 7,
     icon: ICON.star,
     iconFilled: false,
-    title: "Conclusao",
-    description: "Revise tudo e ative sua loja para comecar a receber pedidos.",
+    title: "Conclusão",
+    description: "Revise tudo e ative sua loja para começar a receber pedidos.",
     status: "pending" as const,
   },
 ];
@@ -273,7 +273,7 @@ function WelcomeModal({
           <p
             className={`${font.regular} text-[14px] sm:text-[15px] text-[#666] leading-[20px] sm:leading-[22px]`}
           >
-           Preparamos um tour rapido para mostrar onde ficam as etapas de configuracao da sua loja e como acompanhar seu progresso.
+           Preparamos um tour rápido para mostrar onde ficam as etapas de configuração da sua loja e como acompanhar seu progresso.
           </p>
 
           {/* Highlights */}
@@ -281,7 +281,7 @@ function WelcomeModal({
             {[
               { glyph: ICON.menu, text: "Onde configurar sua loja" },
               { glyph: ICON.check, text: "Como acompanhar o progresso" },
-              { glyph: ICON.star, text: "Por onde comecar" },
+              { glyph: ICON.star, text: "Por onde começar" },
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-2.5">
                 <div className="w-5 h-5 flex items-center justify-center shrink-0">
@@ -311,7 +311,7 @@ function WelcomeModal({
               <span
                 className={`${font.medium} text-[14px] text-white leading-[16px]`}
               >
-                Vamos la!
+                Vamos lá!
               </span>
               <Icon
                 glyph={ICON.arrowRight}
@@ -335,7 +335,7 @@ function WelcomeModal({
 }
 
 /* --- Step order --- */
-const STEP_ORDER_HOME = ["Formas de pagamento", "Area de entrega", "Horarios", "Perfil da loja", "Dados bancarios", "Cardapio"];
+const STEP_ORDER_HOME = ["Formas de pagamento", "Área de entrega", "Horários", "Perfil da loja", "Dados bancários", "Cardápio"];
 
 /* --- Main Export --- */
 export function HomePage({
@@ -403,7 +403,7 @@ export function HomePage({
                 Boas vindas ao iFood!
               </h1>
               <p className={`${font.regular} text-[13px] sm:text-[14px] text-white/70 leading-[18px] sm:leading-[20px]`}>
-                Vamos te guiar em cada etapa para configurar sua loja e comecar a receber pedidos.
+                Vamos te guiar em cada etapa para configurar sua loja e começar a receber pedidos.
               </p>
             </div>
           </div>
@@ -417,7 +417,7 @@ export function HomePage({
             Como funciona?
           </h2>
           <p className={`${font.regular} text-[14px] sm:text-[15px] text-[#666] leading-[20px]`}>
-            Sao 3 coisas simples que voce precisa saber antes de comecar:
+            São 3 coisas simples que você precisa saber antes de começar:
           </p>
         </div>
 
@@ -425,17 +425,17 @@ export function HomePage({
           <InfoCard
             icon={ICON.menu}
             title="Preencha as etapas"
-            description="Complete cada secao com as informacoes da sua loja, no seu ritmo."
+            description="Complete cada seção com as informações da sua loja, no seu ritmo."
           />
           <InfoCard
             icon={ICON.check}
             title="Acompanhe o progresso"
-            description="Veja o que ja foi feito e o que falta para ativar sua loja."
+            description="Veja o que já foi feito e o que falta para ativar sua loja."
           />
           <InfoCard
             icon={ICON.star}
             title="Comece a vender"
-            description="Ao finalizar todas as etapas, sua loja estara pronta para receber pedidos."
+            description="Ao finalizar todas as etapas, sua loja estará pronta para receber pedidos."
           />
         </div>
       </div>
@@ -445,7 +445,7 @@ export function HomePage({
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
             <h2 className={`${font.medium} text-[18px] sm:text-[20px] text-[#141414] leading-[24px]`}>
-              Suas etapas de configuracao
+              Suas etapas de configuração
             </h2>
             <div className="bg-[#f5f5f5] px-2 py-0.5 rounded-full">
               <span className={`${font.medium} text-[12px] text-[#666] leading-[16px]`}>
@@ -454,14 +454,14 @@ export function HomePage({
             </div>
           </div>
           <p className={`${font.regular} text-[14px] sm:text-[15px] text-[#666] leading-[20px]`}>
-            Complete cada etapa abaixo para ativar sua loja. Voce pode faze-las
+            Complete cada etapa abaixo para ativar sua loja. Você pode fazê-las
             na ordem que preferir.
           </p>
         </div>
 
         <div data-tour-step="steps-timeline" className="bg-[#f5f5f5] rounded-[14px] sm:rounded-[16px] p-2.5 sm:p-4">
           {steps.map((step, i) => {
-            const isConclusao = step.title === "Conclusao";
+            const isConclusao = step.title === "Conclusão";
             const isStepCompleted = isConclusao ? allConfigDone : completedSteps.has(step.title);
             const isStepLocked = isConclusao && !allConfigDone;
             return (
@@ -473,7 +473,7 @@ export function HomePage({
                 isLocked={isStepLocked}
                 onClick={() => {
                   if (isConclusao && allConfigDone) {
-                    onNavigateToStep?.("Conclusao");
+                    onNavigateToStep?.("Conclusão");
                   } else if (!isConclusao) {
                     onNavigateToStep?.(step.title);
                   }
@@ -492,13 +492,13 @@ export function HomePage({
           </div>
           <div className="flex-1">
             <p className={`${font.medium} text-[15px] sm:text-[16px] text-[#141414] leading-[20px]`}>
-              Dica para comecar bem
+              Dica para começar bem
             </p>
             <p className={`${font.regular} text-[13px] sm:text-[14px] text-[#666] leading-[18px] sm:leading-[20px] mt-1`}>
-              Comece pela <strong className={font.medium}>Area de entrega</strong> e pelo{" "}
-              <strong className={font.medium}>Cardapio</strong> &#8212; sao as etapas que mais
+              Comece pela <strong className={font.medium}>Área de entrega</strong> e pelo{" "}
+              <strong className={font.medium}>Cardápio</strong> &#8212; são as etapas que mais
               impactam suas chances de receber o primeiro pedido rapidamente.
-              Lojas que completam o cadastro em ate 7 dias tem 65% mais chances
+              Lojas que completam o cadastro em até 7 dias têm 65% mais chances
               de vender na primeira semana!
             </p>
           </div>
@@ -513,7 +513,7 @@ export function HomePage({
           className="bg-[#141414] text-white w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-[12px] cursor-pointer hover:bg-[#333] transition-colors"
         >
           <span className={`${font.medium} text-[16px] leading-[24px]`}>
-            Comecar configuracao
+            Começar configuração
           </span>
           <Icon glyph={ICON.arrowRight} filled={false} size={20} color="white" />
         </button>

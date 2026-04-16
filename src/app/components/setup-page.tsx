@@ -73,17 +73,17 @@ function Icon({
 }
 
 /* --- Sidebar menu items --- */
-const STEP_ORDER = ["Formas de pagamento", "Area de entrega", "Horarios", "Perfil da loja", "Dados bancarios", "Cardapio"];
+const STEP_ORDER = ["Formas de pagamento", "Área de entrega", "Horários", "Perfil da loja", "Dados bancários", "Cardápio"];
 
 const menuItemsDef = [
-  { glyph: ICON.home, label: "Inicio" },
+  { glyph: ICON.home, label: "Início" },
   { glyph: ICON.payment, label: "Formas de pagamento" },
-  { glyph: ICON.delivery, label: "Area de entrega" },
-  { glyph: ICON.clock, label: "Horarios" },
+  { glyph: ICON.delivery, label: "Área de entrega" },
+  { glyph: ICON.clock, label: "Horários" },
   { glyph: ICON.store, label: "Perfil da loja" },
-  { glyph: ICON.bank, label: "Dados bancarios" },
-  { glyph: ICON.menu, label: "Cardapio" },
-  { glyph: ICON.star, label: "Conclusao" },
+  { glyph: ICON.bank, label: "Dados bancários" },
+  { glyph: ICON.menu, label: "Cardápio" },
+  { glyph: ICON.star, label: "Conclusão" },
 ];
 
 /* --- Store selector --- */
@@ -94,13 +94,13 @@ function StoreSelector({ completedCount }: { completedCount: number }) {
   let statusLabel: string;
   let statusColor: string;
   if (completedCount === 0) {
-    statusLabel = `Vamos comecar? (${completedCount} de ${total})`;
+    statusLabel = `Vamos começar? (${completedCount} de ${total})`;
     statusColor = "#ccc";
   } else if (completedCount < total) {
-    statusLabel = `Em configuracao (${completedCount} de ${total})`;
+    statusLabel = `Em configuração (${completedCount} de ${total})`;
     statusColor = "#EB0033";
   } else {
-    statusLabel = `Configuracao concluida! (${completedCount} de ${total})`;
+    statusLabel = `Configuração concluída! (${completedCount} de ${total})`;
     statusColor = "#EB0033";
   }
 
@@ -167,7 +167,7 @@ function Sidebar({
         {menuItemsDef.map((item, index) => {
           const isActive = activeTab === item.label;
           const isCompleted = completedSteps.has(item.label);
-          const isLocked = item.label === "Conclusao" && isConclusaoLocked;
+          const isLocked = item.label === "Conclusão" && isConclusaoLocked;
 
           let iconGlyph = item.glyph;
           let iconColor = "#141414";
@@ -198,7 +198,7 @@ function Sidebar({
                 </div>
               )}
               <button
-                data-tour-step={item.label === "Conclusao" ? "conclusao-menu" : undefined}
+                data-tour-step={item.label === "Conclusão" ? "conclusao-menu" : undefined}
                 disabled={isLocked}
                 onClick={() => {
                   if (isLocked) return;
@@ -271,7 +271,7 @@ function Sidebar({
         </button>
         <button
           onClick={() => {
-            onTabChange("Conclusao");
+            onTabChange("Conclusão");
             onClose?.();
           }}
           className="flex gap-[8px] items-center h-[40px] px-3 rounded-[12px] hover:bg-[rgba(0,0,0,0.08)] transition-colors cursor-pointer w-full text-left"
@@ -282,7 +282,7 @@ function Sidebar({
           <span
             className={`${font.medium} text-[14px] text-[#141414] leading-[16px]`}
           >
-            Usuarios
+            Usuários
           </span>
         </button>
         <button
@@ -445,7 +445,7 @@ function CompetitiveHeader() {
         </div>
       </div>
       <span className={`${font.medium} text-[14px] text-[#141414] leading-[16px]`}>
-        Analise competitiva
+        Análise competitiva
       </span>
     </div>
   );
@@ -457,11 +457,11 @@ function LevelCard() {
     <div className="grid grid-cols-2 xl:grid-cols-4 gap-2">
       <div className="bg-white rounded-[12px] p-4 flex flex-col gap-2 justify-center col-span-2">
         <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>
-          Nivel 3 de 5
+          Nível 3 de 5
         </p>
         <div>
           <p className={`${font.medium} text-[18px] text-[#141414] leading-[24px]`}>
-            Pronto para comecar a vender!
+            Pronto para começar a vender!
           </p>
           <div className="mt-2">
             <SegmentationBar />
@@ -522,7 +522,7 @@ function LevelCard() {
             65%
           </p>
           <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>
-            em ate 7 dias
+            em até 7 dias
           </p>
         </div>
       </div>
@@ -585,10 +585,10 @@ function VideoCard({
 
 /* --- Checklist --- */
 const checkItems = [
-  "Revisei meu cardapio",
-  "Revisei horario de funcionamento",
-  "A logistica de entrega esta pronta",
-  "Estou com a operacao pronta para receber pedidos",
+  "Revisei meu cardápio",
+  "Revisei horário de funcionamento",
+  "A logística de entrega está pronta",
+  "Estou com a operação pronta para receber pedidos",
 ];
 
 function Checklist({ onAllChecked, className }: { onAllChecked?: (allChecked: boolean) => void; className?: string }) {
@@ -696,7 +696,7 @@ function VideosSection() {
           <div data-tour-videos="true" className="flex gap-3 w-max">
             <VideoCard
               image={imgImage}
-              title="Entenda como ficar com a loja aberta e por onde voce recebera os pedidos"
+              title="Entenda como ficar com a loja aberta e por onde você receberá os pedidos"
               time="6:15"
             />
             <VideoCard
@@ -706,7 +706,7 @@ function VideosSection() {
             />
             <VideoCard
               image={imgImage2}
-              title="Aprenda como usar o Portal do Parceiro no seu dia-dia"
+              title="Aprenda como usar o Portal do Parceiro no seu dia a dia"
               time="8:33"
             />
           </div>
@@ -814,7 +814,7 @@ function MainContent({ onChecklistChange }: { onChecklistChange?: (allChecked: b
     <div className="flex flex-col gap-5 w-full pb-24">
       <div className="flex flex-col gap-1">
         <h1 className={`${font.medium} text-[20px] text-black leading-[24px]`}>
-          Parabens! Voce passou por todas as etapas.
+          Parabéns! Você passou por todas as etapas.
         </h1>
         <p className={`${font.regular} text-[16px] text-[#666] leading-[20px]`}>
           <span
@@ -826,8 +826,8 @@ function MainContent({ onChecklistChange }: { onChecklistChange?: (allChecked: b
           >
             Pelos dados preenchidos.
           </span>
-          {" "}Te mostramos a forca que sua loja tem em relacao a outras lojas da
-          sua regiao na mesma categoria
+          {" "}Te mostramos a força que sua loja tem em relação a outras lojas da
+          sua região na mesma categoria
         </p>
       </div>
 
@@ -856,7 +856,7 @@ function MainContent({ onChecklistChange }: { onChecklistChange?: (allChecked: b
             ]}
           />
           <MetricCard
-            title="Descricao dos itens"
+            title="Descrição dos itens"
             value="80%"
             meta="Meta = 80%"
             bars={[
@@ -956,7 +956,7 @@ function StepFooter({
           className="flex gap-[8px] items-center justify-center overflow-clip px-5 py-3 rounded-[12px] shrink-0 cursor-pointer hover:bg-[#d8002f] active:bg-[#c5002b] transition-colors bg-[#eb0033]"
         >
           <span className={`${font.medium} text-[14px] text-white leading-[16px] whitespace-nowrap`}>
-            Proximo
+            Próximo
           </span>
           <Icon glyph={ICON.arrowRight} filled={false} size={16} color="white" />
         </button>
@@ -969,27 +969,27 @@ function StepFooter({
 const STEP_DESCRIPTIONS: Record<string, { title: string; desc: string }> = {
   "Formas de pagamento": {
     title: "Formas de pagamento",
-    desc: "Configure as bandeiras de cartoes e outros metodos de pagamento que sua loja vai aceitar.",
+    desc: "Configure as bandeiras de cartões e outros métodos de pagamento que sua loja vai aceitar.",
   },
-  "Area de entrega": {
-    title: "Area de entrega",
-    desc: "Defina o raio de entrega e as regioes que sua loja vai atender.",
+  "Área de entrega": {
+    title: "Área de entrega",
+    desc: "Defina o raio de entrega e as regiões que sua loja vai atender.",
   },
-  "Horarios": {
-    title: "Horarios",
-    desc: "Configure os dias e horarios em que sua loja ficara aberta no iFood.",
+  "Horários": {
+    title: "Horários",
+    desc: "Configure os dias e horários em que sua loja ficará aberta no iFood.",
   },
   "Perfil da loja": {
     title: "Perfil da loja",
-    desc: "Adicione logo, descricao e informacoes que seus clientes verao.",
+    desc: "Adicione logo, descrição e informações que seus clientes verão.",
   },
-  "Dados bancarios": {
-    title: "Dados bancarios",
-    desc: "Cadastre a conta onde voce recebera seus pagamentos.",
+  "Dados bancários": {
+    title: "Dados bancários",
+    desc: "Cadastre a conta onde você receberá seus pagamentos.",
   },
-  "Cardapio": {
-    title: "Cardapio",
-    desc: "Monte seu cardapio com itens, precos, fotos e descricoes.",
+  "Cardápio": {
+    title: "Cardápio",
+    desc: "Monte seu cardápio com itens, preços, fotos e descrições.",
   },
 };
 
@@ -1026,7 +1026,7 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
   return (
     <div className="flex flex-col gap-5 w-full pb-28">
       <div className="flex items-center gap-2">
-        <span className={`${font.regular} text-[13px] text-[#999] leading-[16px]`}>Configuracao</span>
+        <span className={`${font.regular} text-[13px] text-[#999] leading-[16px]`}>Configuração</span>
         <Icon glyph={ICON.arrowRight} filled={false} size={12} color="#999" />
         <span className={`${font.medium} text-[13px] text-[#141414] leading-[16px]`}>Perfil da loja</span>
       </div>
@@ -1045,7 +1045,7 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
               </div>
             )}
           </div>
-          <p className={`${font.regular} text-[14px] text-[#666] leading-[20px] mt-0.5`}>Configure como sua loja sera vista no app do iFood</p>
+          <p className={`${font.regular} text-[14px] text-[#666] leading-[20px] mt-0.5`}>Configure como sua loja será vista no app do iFood</p>
           <p className={`${font.regular} text-[12px] text-[#999] leading-[16px] mt-1`}>Etapa {stepIndex + 1} de {STEP_ORDER.length}</p>
         </div>
       </div>
@@ -1055,7 +1055,7 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
         <div className="flex flex-col gap-4 w-full">
           <div className="flex flex-col gap-2">
             <p className={`font-['iFood_RC_Textos:Bold',sans-serif] font-bold text-[20px] text-[#141414] leading-[24px]`}>Nome</p>
-            <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>Esse e o nome que ira aparecer para os clientes</p>
+            <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>Esse é o nome que irá aparecer para os clientes</p>
           </div>
           <div className={`relative rounded-[8px] border transition-colors ${nameFocused ? "border-[#141414]" : "border-[#ebebeb]"}`}>
             <input
@@ -1080,7 +1080,7 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 w-full">
             <div className="flex flex-col gap-2 shrink-0">
               <p className={`font-['iFood_RC_Textos:Bold',sans-serif] font-bold text-[20px] text-[#141414] leading-[24px]`}>Logo</p>
-              <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>Imagem de ate 5 MB em JPG, JPEG ou PNG</p>
+              <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>Imagem de até 5 MB em JPG, JPEG ou PNG</p>
             </div>
             <div className="flex items-end shrink-0">
               <div className="h-[48px] mr-[-32px] overflow-clip relative shrink-0 w-[64px] z-[2]">
@@ -1093,8 +1093,8 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
               <div className="bg-[#ffebef] flex-1 min-w-0 mr-[-32px] relative rounded-[12px] z-[1]">
                 <div className="flex items-end justify-center pl-[40px] pr-[16px] py-[9px]">
                   <p className={`${font.regular} text-[10px] text-[#666] leading-[normal]`}>
-                    <span>Numeros de telefone e links para outros sites nao podem aparecer na imagem. Consulte nossa </span>
-                    <span className="underline cursor-pointer hover:text-[#141414] transition-colors">Politica de Conteudo</span>
+                    <span>Números de telefone e links para outros sites não podem aparecer na imagem. Consulte nossa </span>
+                    <span className="underline cursor-pointer hover:text-[#141414] transition-colors">Política de Conteúdo</span>
                     <span>.</span>
                   </p>
                 </div>
@@ -1139,7 +1139,7 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
                     {logoPreview ? "Trocar logo" : "Clique para enviar seu logo"}
                   </span>
                 </div>
-                <p className={`${font.regular} text-[12px] text-[#666] leading-[16px] text-center`}>Tamanho minimo: 85 x 85 px</p>
+                <p className={`${font.regular} text-[12px] text-[#666] leading-[16px] text-center`}>Tamanho mínimo: 85 x 85 px</p>
               </div>
             </div>
           </div>
@@ -1147,12 +1147,12 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
 
         <div className="bg-[#ebebeb] h-px w-full" />
 
-        {/* Pedido minimo */}
+        {/* Pedido mínimo */}
         <div className="flex flex-col gap-4 w-full">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 w-full">
             <div className="flex flex-col gap-2 shrink-0">
-              <p className={`font-['iFood_RC_Textos:Bold',sans-serif] font-bold text-[20px] text-[#141414] leading-[24px]`}>Pedido minimo</p>
-              <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>Esse e o valor minimo de compra na loja</p>
+              <p className={`font-['iFood_RC_Textos:Bold',sans-serif] font-bold text-[20px] text-[#141414] leading-[24px]`}>Pedido mínimo</p>
+              <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>Esse é o valor mínimo de compra na loja</p>
             </div>
             <div className="flex items-end shrink-0">
               <div className="h-[48px] mr-[-32px] overflow-clip relative shrink-0 w-[64px] z-[2]">
@@ -1171,7 +1171,7 @@ function PerfilDaLojaContent({ isCompleted }: { isCompleted: boolean }) {
                 </div>
               </div>
               <div className="bg-[#ebf8ff] flex items-end justify-center mr-[-32px] pl-[40px] pr-[16px] py-[9px] rounded-[12px] z-[1]">
-                <span className={`${font.medium} text-[12px] text-[#141414] leading-[16px] whitespace-nowrap`}>R$20,00 e um bom comeco</span>
+                <span className={`${font.medium} text-[12px] text-[#141414] leading-[16px] whitespace-nowrap`}>R$20,00 é um bom começo</span>
               </div>
             </div>
           </div>
@@ -1233,7 +1233,7 @@ function StepContent({
     <div className="flex flex-col gap-5 w-full pb-28">
       <div className="flex items-center gap-2">
         <span className={`${font.regular} text-[13px] text-[#999] leading-[16px]`}>
-          Configuracao
+          Configuração
         </span>
         <Icon glyph={ICON.arrowRight} filled={false} size={12} color="#999" />
         <span className={`${font.medium} text-[13px] text-[#141414] leading-[16px]`}>
@@ -1270,7 +1270,7 @@ function StepContent({
 
       <div className="bg-[#f5f5f5] rounded-[16px] p-4 sm:p-6 min-h-[300px] flex flex-col gap-4">
         <p className={`${font.regular} text-[14px] text-[#666] leading-[20px]`}>
-          Conteudo da configuracao de <strong className={font.medium}>{tabName}</strong> sera exibido aqui.
+          Conteúdo da configuração de <strong className={font.medium}>{tabName}</strong> será exibido aqui.
         </p>
         <div className="flex-1 flex items-center justify-center opacity-30">
           <Icon glyph={stepIcon} filled size={64} color="#a3a3a3" />
@@ -1283,7 +1283,7 @@ function StepContent({
 /* --- Setup Page (main export) --- */
 export function SetupPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Inicio");
+  const [activeTab, setActiveTab] = useState("Início");
   const [completedSteps, setCompletedSteps] = useState(new Set<string>());
   const [checklistReady, setChecklistReady] = useState(false);
 
@@ -1301,7 +1301,7 @@ export function SetupPage() {
   }, []);
 
   const handleTabChange = (tab: string) => {
-    if (tab === "Conclusao" && allConfigDone) {
+    if (tab === "Conclusão" && allConfigDone) {
       setActiveTab(tab);
       window.dispatchEvent(new CustomEvent("open-conclusao-dialog"));
       return;
@@ -1316,7 +1316,7 @@ export function SetupPage() {
 
     const nowAllDone = STEP_ORDER.every((s) => next.has(s));
     if (nowAllDone) {
-      setActiveTab("Conclusao");
+      setActiveTab("Conclusão");
       window.dispatchEvent(new CustomEvent("open-conclusao-dialog"));
       return;
     }
@@ -1335,7 +1335,7 @@ export function SetupPage() {
   const handleBack = () => {
     const currentIndex = STEP_ORDER.indexOf(activeTab);
     if (currentIndex <= 0) {
-      setActiveTab("Inicio");
+      setActiveTab("Início");
     } else {
       setActiveTab(STEP_ORDER[currentIndex - 1]);
     }
@@ -1361,17 +1361,17 @@ export function SetupPage() {
 
         <div className="flex-1 min-w-0">
           <div className="bg-white rounded-t-[16px] lg:rounded-[16px] min-h-[calc(100vh-46px)] p-4 sm:p-6">
-            {activeTab === "Inicio" ? (
+            {activeTab === "Início" ? (
               <HomePage
                 onNavigateToStep={(step) => handleTabChange(step)}
                 completedSteps={completedSteps}
               />
-            ) : activeTab === "Conclusao" ? (
+            ) : activeTab === "Conclusão" ? (
               <MainContent onChecklistChange={setChecklistReady} />
             ) : activeTab === "Perfil da loja" ? (
               <PerfilDaLojaContent isCompleted={completedSteps.has("Perfil da loja")} />
-            ) : activeTab === "Horarios" ? (
-              <HorariosContent isCompleted={completedSteps.has("Horarios")} />
+            ) : activeTab === "Horários" ? (
+              <HorariosContent isCompleted={completedSteps.has("Horários")} />
             ) : (
               <StepContent tabName={activeTab} isCompleted={completedSteps.has(activeTab)} />
             )}
@@ -1387,7 +1387,7 @@ export function SetupPage() {
         />
       )}
 
-      {activeTab === "Conclusao" && (
+      {activeTab === "Conclusão" && (
         <div className="fixed bottom-0 left-0 right-0 z-20 bg-white border-t border-[#ebebeb] lg:left-[240px]">
           <div className="max-w-[1200px] mx-auto flex items-center justify-center px-4 sm:px-6 py-3">
             <button

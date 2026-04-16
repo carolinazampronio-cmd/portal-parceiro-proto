@@ -62,7 +62,7 @@ const RECOMMENDED_SCHEDULE: DaySchedule[] = [
     ]
   },
   {
-    day: "Terca-feira", short: "Ter", status: "Aberta", shifts: [
+    day: "Terça-feira", short: "Ter", status: "Aberta", shifts: [
       { start: "11:00", end: "15:00" },
       { start: "18:00", end: "23:00" }
     ]
@@ -81,7 +81,7 @@ const RECOMMENDED_SCHEDULE: DaySchedule[] = [
   },
   { day: "Sexta-feira", short: "Sex", status: "Fechada", shifts: [] },
   {
-    day: "Sabado", short: "Sab", status: "Aberta", shifts: [
+    day: "Sábado", short: "Sáb", status: "Aberta", shifts: [
       { start: "11:00", end: "15:00" },
       { start: "18:00", end: "23:00" }
     ]
@@ -91,11 +91,11 @@ const RECOMMENDED_SCHEDULE: DaySchedule[] = [
 const MANUAL_SCHEDULE: DaySchedule[] = RECOMMENDED_SCHEDULE.map(s => ({...s}));
 
 export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
-  const [activeTab, setActiveTab] = useState<"Editar horarios" | "Recomendacoes">("Recomendacoes");
+  const [activeTab, setActiveTab] = useState<"Editar horários" | "Recomendações">("Recomendações");
 
   const [manualSchedule, setManualSchedule] = useState<DaySchedule[]>(MANUAL_SCHEDULE);
 
-  const currentSchedule = activeTab === "Recomendacoes" ? RECOMMENDED_SCHEDULE : manualSchedule;
+  const currentSchedule = activeTab === "Recomendações" ? RECOMMENDED_SCHEDULE : manualSchedule;
 
   const hoursList = [
     "0h", "2h", "4h", "6h", "8h", "10h", "12h", "14h", "16h", "18h", "20h", "22h", "23:59"
@@ -112,7 +112,7 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
   };
 
   const handleCellClick = (dayIndex: number, rowIdx: number) => {
-    if (activeTab === "Recomendacoes") return;
+    if (activeTab === "Recomendações") return;
 
     setManualSchedule(prev => {
       const newSchedule = [...prev];
@@ -150,19 +150,19 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
           <h1 className={`${font.medium} text-[20px] text-[#141414] leading-[24px]`}>
-            Horarios de Funcionamento
+            Horários de Funcionamento
           </h1>
           {isCompleted && (
             <div className="flex items-center gap-1 bg-[#e8f5e9] px-2 py-0.5 rounded-full">
               <Icon glyph={ICON.check} filled size={14} color="#007a3f" />
               <span className={`${font.medium} text-[12px] text-[#007a3f] leading-[16px]`}>
-                Concluida
+                Concluída
               </span>
             </div>
           )}
         </div>
         <p className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>
-          Configure os dias e periodos em que sua loja estara aberta no app iFood e podera receber pedidos.
+          Configure os dias e períodos em que sua loja estará aberta no app iFood e poderá receber pedidos.
         </p>
       </div>
 
@@ -173,10 +173,10 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
         </div>
         <div className="flex flex-col gap-1">
           <p className={`${font.medium} text-[14px] text-white leading-[16px]`}>
-            Escolha os dias e horarios da sua loja vai operar!
+            Escolha os dias e horários da sua loja vai operar!
           </p>
           <p className={`${font.regular} text-[14px] text-white/80 leading-[16px]`}>
-            Recomendamos horarios baseados nos parceiros de melhor performance da sua cidade e categoria.
+            Recomendamos horários baseados nos parceiros de melhor performance da sua cidade e categoria.
           </p>
         </div>
       </div>
@@ -187,23 +187,23 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
           {/* Segment Control */}
           <div className="bg-[#ebebeb] h-12 p-1 rounded-[16px] flex gap-2 relative">
             <button
-              onClick={() => setActiveTab("Editar horarios")}
+              onClick={() => setActiveTab("Editar horários")}
               className={`flex-1 rounded-[12px] flex items-center justify-center transition-all cursor-pointer ${
-                activeTab === "Editar horarios" ? "bg-white shadow-[0px_1px_6px_0px_rgba(21,21,21,0.08)]" : "hover:bg-white/50"
+                activeTab === "Editar horários" ? "bg-white shadow-[0px_1px_6px_0px_rgba(21,21,21,0.08)]" : "hover:bg-white/50"
               }`}
             >
-              <span className={`${activeTab === "Editar horarios" ? font.medium + " text-[#141414]" : font.regular + " text-[#666]"} text-[14px] leading-[16px]`}>
-                Editar horarios
+              <span className={`${activeTab === "Editar horários" ? font.medium + " text-[#141414]" : font.regular + " text-[#666]"} text-[14px] leading-[16px]`}>
+                Editar horários
               </span>
             </button>
             <button
-              onClick={() => setActiveTab("Recomendacoes")}
+              onClick={() => setActiveTab("Recomendações")}
               className={`flex-1 rounded-[12px] flex items-center justify-center transition-all cursor-pointer ${
-                activeTab === "Recomendacoes" ? "bg-white shadow-[0px_1px_6px_0px_rgba(21,21,21,0.08)]" : "hover:bg-white/50"
+                activeTab === "Recomendações" ? "bg-white shadow-[0px_1px_6px_0px_rgba(21,21,21,0.08)]" : "hover:bg-white/50"
               }`}
             >
-              <span className={`${activeTab === "Recomendacoes" ? font.medium + " text-[#141414]" : font.regular + " text-[#666]"} text-[14px] leading-[16px]`}>
-                Recomendacoes
+              <span className={`${activeTab === "Recomendações" ? font.medium + " text-[#141414]" : font.regular + " text-[#666]"} text-[14px] leading-[16px]`}>
+                Recomendações
               </span>
             </button>
           </div>
@@ -212,7 +212,7 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
           <div className="flex flex-col gap-2 overflow-y-auto max-h-[500px] pr-1">
             {currentSchedule.map((schedule, idx) => (
               <div key={idx} className="bg-white p-3 rounded-[16px] shadow-[0px_1px_6px_0px_rgba(21,21,21,0.08)] flex flex-col gap-2">
-                {activeTab === "Recomendacoes" && schedule.status === "Aberta" && (
+                {activeTab === "Recomendações" && schedule.status === "Aberta" && (
                   <div className="bg-[#ebfff5] self-start flex items-center gap-1 px-2 py-1 rounded-[12px]">
                     <Icon glyph={"\uE8DF"} filled size={12} color="#007a3f" />
                     <span className={`${font.bold} text-[10px] text-[#007a3f] leading-none uppercase`}>
@@ -236,7 +236,7 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
                   <div className="flex flex-col gap-1">
                     {schedule.shifts.map((shift, i) => (
                       <span key={i} className={`${font.regular} text-[14px] text-[#666] leading-[16px]`}>
-                        {shift.start} as {shift.end}h
+                        {shift.start} às {shift.end}h
                       </span>
                     ))}
                   </div>
@@ -251,7 +251,7 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
 
           <button className="bg-[#141414] text-white rounded-[12px] py-3 mt-2 hover:bg-black transition-colors w-full cursor-pointer">
             <span className={`${font.medium} text-[14px] leading-[16px]`}>
-              {activeTab === "Recomendacoes" ? "Salvar recomendacoes" : "Salvar horarios"}
+              {activeTab === "Recomendações" ? "Salvar recomendações" : "Salvar horários"}
             </span>
           </button>
         </div>
@@ -294,7 +294,7 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
                       <div
                         key={rowIdx}
                         onClick={() => handleCellClick(colIdx, rowIdx)}
-                        className={`flex-1 rounded-[4px] bg-[#f5f5f5] ${activeTab === "Editar horarios" ? "cursor-pointer hover:bg-[#ebebeb] transition-colors" : ""}`}
+                        className={`flex-1 rounded-[4px] bg-[#f5f5f5] ${activeTab === "Editar horários" ? "cursor-pointer hover:bg-[#ebebeb] transition-colors" : ""}`}
                       />
                     ))}
 
@@ -308,12 +308,12 @@ export function HorariosContent({ isCompleted }: { isCompleted: boolean }) {
                         <div
                           key={sIdx}
                           onClick={() => {
-                             if (activeTab === "Editar horarios") {
+                             if (activeTab === "Editar horários") {
                                const rowIdx = Math.floor(startHour / 2);
                                handleCellClick(colIdx, rowIdx);
                              }
                           }}
-                          className={`absolute w-full bg-[#ebfff5] rounded-[8px] flex items-start justify-center p-1 overflow-hidden ${activeTab === "Editar horarios" ? "cursor-pointer hover:bg-[#d1f5e0] transition-colors" : ""}`}
+                          className={`absolute w-full bg-[#ebfff5] rounded-[8px] flex items-start justify-center p-1 overflow-hidden ${activeTab === "Editar horários" ? "cursor-pointer hover:bg-[#d1f5e0] transition-colors" : ""}`}
                           style={{
                             top: `calc(${topPercent}% + 2px)`,
                             height: `calc(${heightPercent}% - 4px)`,
